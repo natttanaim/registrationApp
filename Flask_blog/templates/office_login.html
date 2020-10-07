@@ -1,0 +1,40 @@
+
+{% extends "layout.html" %}
+{% block A1 %}
+<div class="content-section">
+    <form method="POST" action="">
+
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">
+                Staff Login
+            </legend>
+            <div class="form-group">
+                {{ form.username.label }}
+                {{ form.username }}
+                {% if form.username.errors %}
+                <div>
+                    {% for error in form.username.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.password.label }}
+                {{ form.password }}
+                {% if form.password.errors %}
+                <div>
+                    {% for error in form.password.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+
+{% endblock A1 %}

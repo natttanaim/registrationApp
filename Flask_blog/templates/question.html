@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block A1 %}
+<div class="content-section">
+    <h2>กรุณาตอบแบบสอบถามเพื่อทำการลงทะเบียน</h2>
+<p>นักศึกษารหัส {{ stid }}</p>
+<p>ชื่อนักศึกษา {{ name }}</p>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.age.label }}
+            {{ form.age }}
+            {% if form.age.errors %}
+            <div>
+                {% for error in form.age.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.phone.label }}
+            {{ form.phone }}
+            {% if form.phone.errors %}
+            <div>
+                {% for error in form.phone.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.company.label }}
+            {{ form.company }}
+            {% if form.company.errors %}
+            <div>
+                {% for error in form.company.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.question1.label }}
+            {{ form.question1 }}
+            {% if form.question1.errors %}
+            <div>
+                {% for error in form.question1.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.question2.label }}
+            {{ form.question2 }}
+            {% if form.question2.errors %}
+            <div>
+                {% for error in form.question2.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.question3.label }}
+            {{ form.question3 }}
+            {% if form.question3.errors %}
+            <div>
+                {% for error in form.question3.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.question4.label }}
+            {{ form.question4 }}
+            {% if form.question4.errors %}
+            <div>
+                {% for error in form.question4.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.question5.label }}
+            {{ form.question5 }}
+            {% if form.question5.errors %}
+            <div>
+                {% for error in form.question5.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+{% endblock A1 %}
